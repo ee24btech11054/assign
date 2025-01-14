@@ -53,11 +53,13 @@ while iteration < max_iterations:
 # Convert lists to numpy arrays for plotting
 theta = np.array(theta)
 c = np.array(c)
+print(theta[-1],c[-1])
 
 # Plotting theoretical and simulation results
 plt.figure(figsize=(8, 6))
 plt.plot(theta_vals, c_vals, label='Theory', linewidth=5, color='green')
 plt.plot(theta, c, label='Sim', color='yellow')
+plt.plot(theta[-1],c[-1], 'ro',label="local minima")
 plt.title(r'Plot of $c = a \sec(\theta) + b \csc(\theta)$')
 plt.xlabel(r'$\theta$ (radians)')
 plt.ylabel(r'$c$')
